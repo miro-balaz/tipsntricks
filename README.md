@@ -1,6 +1,6 @@
 # tipsntricks
 ## Windows / linux / cygwin line endings
-home is c:\Users\ <name> or variable %USERPROFILE% , but sometimes it is inside directory where you installed cygwin
+home is c:\Users\your-user-name or variable %USERPROFILE% , but sometimes it is inside directory where you installed cygwin
 
 puto following lines into ~/.bash_profile   for cygwin to be able to run .sh files
 ```
