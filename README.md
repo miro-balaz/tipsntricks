@@ -12,3 +12,7 @@ put this into Dockerfile, to fix line endings
 ```
 RUN sed -i 's/\r//g' docker/docker-entrypoint.sh
 ```
+
+## VS code working directory
+In menu Debug/OpenConfigurations put following line into your configuration
+``` "cwd": "${workspaceFolder}/src" ```
