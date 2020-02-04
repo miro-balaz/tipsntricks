@@ -29,3 +29,11 @@ Environment="HTTP_PROXY=http://127.0.0.1:3128"
 Environment="HTTPS_PROXY=http://127.0.0.1:3128"
 Environment="NO_PROXY=localhost,127.0.0.1,172.17.0.1,172.30.1.1"
 ```
+
+# Mongo in windows
+MongoDB has problems with traditional windows shares, this is workaround
+```
+docker volume create --name=mongodata
+docker run -d -p 27017:27017 -v mongodata:/data/db --name=mymongo mongodb:3.3
+```
+instead of ``` docker run -v c:\datafolder ... ```
