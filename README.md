@@ -37,3 +37,7 @@ docker volume create --name=mongodata
 docker run -d -p 27017:27017 -v mongodata:/data/db --name=mymongo mongodb:3.3
 ```
 instead of ``` docker run -v c:\datafolder ... ```
+
+# Docker compose post install
+```mount /tmp -o remount,exec```
+or cryptic message will apper *docker-compose: error while loading shared libraries: libz.so.1: failed to map segment from shared object*
