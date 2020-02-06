@@ -53,7 +53,8 @@ put cert into ```/usr/local/share/ca-certificates/``` and run ```update-ca-certi
 ## Windows
 ```~/.docker/certs.d```  same as linux
 
-# Windows CA, run mmc, add certificates plugin and choose trusted root certificate authority/all tasks/import or just google it
+# Windows CA 
+run mmc, add certificates plugin and choose trusted root certificate authority/all tasks/import or just google it
 
 
 
