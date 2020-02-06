@@ -41,3 +41,20 @@ instead of ``` docker run -v c:\datafolder ... ```
 # Docker compose post install
 ```mount /tmp -o remount,exec```
 or cryptic message will apper *docker-compose: error while loading shared libraries: libz.so.1: failed to map segment from shared object*
+
+# certificates and docker
+
+It didn't helped to add just as certificate authority the self signed certificate itself (cert is .crt file)
+## Linux -docker
+put cert into ```/etc/docker/cetrs.d/<domain>```  domain can be with port, ot it can be ip
+## Linux -CA
+put cert into ```/usr/local/share/ca-certificates/``` and run ```update-ca-certificates```
+
+## Windows
+```~/.docker/certs.d```  same as linux
+
+# Windows CA, run mmc, add certificates plugin and choose trusted root certificate authority/all tasks/import or just google it
+
+
+
+
