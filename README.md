@@ -30,7 +30,7 @@ Environment="HTTPS_PROXY=http://127.0.0.1:3128"
 Environment="NO_PROXY=localhost,127.0.0.1,172.17.0.1,172.30.1.1"
 ```
 
-# Mongo in windows
+## Mongo in windows
 MongoDB has problems with traditional windows shares, this is workaround
 ```
 docker volume create --name=mongodata
@@ -38,11 +38,15 @@ docker run -d -p 27017:27017 -v mongodata:/data/db --name=mymongo mongodb:3.3
 ```
 instead of ``` docker run -v c:\datafolder ... ```
 
-# Docker compose post install
+## kafka
+max.poll.interval.ms = set to high number if processing takes too long.
+together with max.poll.records (use underscores instead of . in kafka python consumer __init__)
+
+## Docker compose post install
 ```mount /tmp -o remount,exec```
 or cryptic message will apper *docker-compose: error while loading shared libraries: libz.so.1: failed to map segment from shared object*
 
-# certificates and docker
+## certificates and docker
 
 It didn't helped to add just as certificate authority the self signed certificate itself (cert is .crt file)
 ## Linux -docker
