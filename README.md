@@ -29,7 +29,8 @@ Environment="HTTP_PROXY=http://127.0.0.1:3128"
 Environment="HTTPS_PROXY=http://127.0.0.1:3128"
 Environment="NO_PROXY=localhost,127.0.0.1,172.17.0.1,172.30.1.1"
 ```
-
+### print stats
+  ```docker stats --all --format "table {{.ID}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}"```
 ## Mongo in windows
 MongoDB has problems with traditional windows shares, this is workaround
 ```
